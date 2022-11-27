@@ -1,4 +1,4 @@
-# Rocket.Chat Omnichannel Rooms Info Downloader
+# 🚀 Rocket.Chat - Omnichannel Rooms Info Downloader
 
 This Python script extracts all the information from the omnichannel rooms and save as a CSV file for further analysis and investigation.
 
