@@ -22,4 +22,4 @@ def rooms_list(x_auth_token: str, x_user_id: str, url: str):
 
 df = pd.json_normalize(rooms_list(x_auth_token, x_user_id, url)["rooms"])
 
-df.to_csv(filename)
+df.to_csv(filename, index=False)
