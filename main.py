@@ -22,18 +22,18 @@ def rooms_list(x_auth_token: str, x_user_id: str, offset: int, url: str):
     return response_rooms
 
 offset = 0
-lista_salas = []
+room_list = []
 
-retorno = rooms_list(x_auth_token, x_user_id, offset, url)
-total = retorno.get("total")
-count = retorno.get("count")
+response = rooms_list(x_auth_token, x_user_id, offset, url)
+total = response.get("total")
+count = response.get("count")
 total_iterations = total / count
 
 for i in tqdm(range(math.ceil(total_iterations))):
-        retorno = rooms_list(x_auth_token, x_user_id, offset, url)
-        total_rooms = retorno.get("total")
-        lista_salas.extend(retorno.get("rooms"))
+        response = rooms_list(x_auth_token, x_user_id, offset, url)
+        total_rooms = response.get("total")
+        room_list.extend(response.get("rooms"))
         offset += count
 
-df = pd.json_normalize(lista_salas)
+df = pd.json_normalize(room_list)
 df.to_csv(filename, index=False)
