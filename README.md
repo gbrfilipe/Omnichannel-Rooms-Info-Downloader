@@ -6,7 +6,7 @@ Before running the code, [increase the number of results per request](https://do
 
 Do not forget to get the [Personal Access Token](https://docs.rocket.chat/guides/user-guides/user-panel/managing-your-account/personal-access-token), it is required.
 
-External libraries: [requests](https://requests.readthedocs.io/en/latest/) and [pandas](https://pandas.pydata.org/).
+External libraries: [requests](https://requests.readthedocs.io/en/latest/), [pandas](https://pandas.pydata.org/) and [tqdm](https://tqdm.github.io/).
 
 Rocket.Chat APIs used: 
 - [Livechat Rooms list](https://developer.rocket.chat/reference/api/rest-api/endpoints/omnichannel/omnichannel-endpoints/rooms/livechat-rooms-list)
